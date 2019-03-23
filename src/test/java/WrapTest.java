@@ -48,4 +48,15 @@ public class WrapTest {
     assertThat(output).isEqualTo(expected_output);
   }
 
+  @Test
+  public void should_wrap_text() {
+    String input = "this is my last test about word wrap kata";
+    int max_line_length = 5;
+    String expected_output = "this\nis my\nlast\ntest\nabout\nword\nwrap\nkata";
+
+    String output = Wrapper.execute(input, max_line_length);
+
+    assertThat(output).isEqualTo(expected_output);
+  }
+
 }
